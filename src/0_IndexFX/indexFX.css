@@ -1,8 +1,19 @@
-iframe{
-	width:100%;
-	height:500px;
-	margin-top: 50px;
-	margin-left: 0px;
-	padding:0px;
+body{
+	max-width: 1500px;
+}
+#Header {
+	width: 100%;
+	height: 120px;
+	margin-top: 0px;
+	padding: 0px;
+	border: 0px;
+}
+
+#Nav_H
+{
+	width: 100%;
+	height: 1050px;
+	margin-top: 0px;
+	padding: 0px;
 	border: 0px;
 }

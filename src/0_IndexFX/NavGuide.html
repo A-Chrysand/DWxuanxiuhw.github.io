@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<title>选项卡切换代码 - 舍力分享</title>
+
+<style type="text/css">
+    body {
+        --Num1px: 1px;
+        --Num1deg: 1deg;
+        --Num1sec: 1s;
+        --Num_NavHeight: calc(var(--Num1px)*var(--hei));
+        --Num_donghuashijian: calc(var(--Num1sec)*var(--donghuashijian));
+        --frontrotate: calc(var(--Num_NavHeight)*0.5*var(--A1));
+        --backrotate: calc(var(--Num_NavHeight)*0.5*var(--A2));
+        --deghover: calc(var(--Num1deg)*var(--dg)*var(--d1));
+        --degleave: calc(var(--Num1deg)*var(--dg)*var(--d2));
+    }
+
+    #Nav_Head {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 80%;
+    }
+
+    #Nav_Head ul {
+        height: var(--Num_NavHeight);
+        position: absolute;
+        width: 80%;
+        display: flex;
+        padding: 0px;
+        margin: 0px;
+        background-color: var(--frontcolor);
+        border-bottom: none;
+        cursor: pointer;
+    }
+
+    #Nav_Head li {
+        width: 200px;
+
+        list-style-type: none;
+        text-align: center;
+        line-height: var(--Num_NavHeight);
+        flex: 1;
+        transform-style: preserve-3d;
+        transition: all var(--Num_donghuashijian) linear;
+        height: var(--Num_NavHeight);
+        cursor: pointer;
+    }
+
+    .slno {
+        display: none;
+    }
+
+    li:hover {
+        transform: rotateX(var(--deghover));
+    }
+
+    .Guide_front {
+        height: var(--Num_NavHeight);
+        position: absolute;
+        width: 100%;
+        background-color: var(--frontcolor);
+        transform: translateZ(var(--frontrotate));
+    }
+
+    .Guide_back {
+        height: var(--Num_NavHeight);
+        position: absolute;
+        width: 100%;
+        background-color: var(--backcolor);
+        transform: translateY(var(--backrotate)) rotateX(var(--degleave));
+    }
+
+    iframe {
+        width: 100%;
+        height: 500px;
+        margin-top: 50px;
+        margin-left: 0px;
+        padding: 0px;
+        border: 0px;
+    }
+</style>
+<script src="NavGuide.js"></script>
+</head>
+
+<body>
+    <div id="Nav_Head">
+        <ul>
+            <li class="slyes">
+                <div class="Guide_front">HTML学习笔记</div>
+                <div class="Guide_back">HTML学习笔记</div>
+            </li>
+            <li>
+                <div class="Guide_front">CSS学习笔记</div>
+                <div class="Guide_back">CSS学习笔记</div>
+
+            </li>
+            <li>
+                <div class="Guide_front">javaScript学习笔记</div>
+                <div class="Guide_back">javaScript学习笔记</div>
+            </li>
+            <li>
+                <div class="Guide_front">Ac's工具箱</div>
+                <div class="Guide_back">Ac's工具箱</div>
+            </li>
+            <li>
+                <div class="Guide_front">网页开发网站推荐</div>
+                <div class="Guide_back">网页开发网站推荐</div>
+            </li>
+
+        </ul>
+        <iframe src="../table1.html"></iframe>
+        <iframe src="../discrption1.html" class="slno"></iframe>
+        <iframe src="../Good.html" class="slno"></iframe>
+        <iframe src="../Good.html" class="slno"></iframe>
+        <iframe src="../Good.html" class="slno"></iframe>
+    </div>
+</body>
+
+</html>
