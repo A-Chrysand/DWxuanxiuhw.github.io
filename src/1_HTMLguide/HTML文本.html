@@ -7,40 +7,209 @@
 	<link rel="stylesheet" href="../IndexFX/text_style.css" />
 	<link rel="stylesheet" href="../IndexFX/StaticSet.css" />
 	<title>Document</title>
+	<style>
+		ul {
+			list-style: none;
+		}
+
+		#wenbengeshihuatable {
+			margin-left: 2em;
+			border-width: 1px;
+			border-style: solid;
+			border-color: darkblue;
+			border-collapse: collapse;
+			max-width: 800px;
+			width: 80%;
+		}
+
+		#wenbengeshihuatable td {
+			border-width: 1px;
+			border-style: solid;
+			border-color: darkblue;
+			border-collapse: collapse;
+		}
+	</style>
 </head>
 
 <body>
-	<p>连接:</p>
-	<p class="text_fs">点击[Text]就能跳转到URL</p>
-	<ol class="codeline">
-		<li>666		</li>
+	<p>文本：</p>
+	<p class="texttab">段落</p>
+	<ul class="codeli">
+		<li>&ltp&gt段落内容&lt/p&gt</li>
+	</ul>
+	<p class="texttab">列表</p>
+	<p class="texttab2">1、有序表</p>
+	<ol class="codelit">
+		<li><span class="sptab">&ltol&gt</span></li>
+		<li><span class="sptab"><span class="sptab">&ltli&gt单元格内容&lt/li&gt</span></span></li>
+		<li><span class="sptab">&ltol&gt</span></li>
+		<li class="codeinst"><span class="sptab">有序表会在内容前会出现1、2、3、I、II、III、a、b、c等标号</span></li>
 	</ol>
-	<p class="text_fsss"><span class="text_code">&lt;a href=&quot;URL&quot;&gt;Text&lt;/a&gt;</span></p>
-	<p class="text_fs">#URL可指向</p>
-	<p class="text_fs">1、同一页面的某一位置</p>
-	<p class="text_fsss"><span class="text_code">&lt;a href=&quot;./blog.html&quot;&gt;博客&lt;/a&gt;</span></p>
-	<p class="text_fsss"><span class="text_code">
-		&lt;h2&nbsp;id=&quot;toc1&quot;&gt;简介&lt;/h2&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-	</p>
-	<p class="text_fs">此时点击目录中的简介就会跳转到简介的介绍页面</p>
+	<p class="texttab2">2、无序表</p>
+	<ol class="codelit">
+		<li><span class="sptab">&ltul&gt</span></li>
+		<li><span class="sptab"><span class="sptab">&ltli&gt单元格内容&lt/li&gt</span></span></li>
+		<li><span class="sptab">&ltul&gt</span></li>
+		<li class="codeinst"><span class="sptab">无序表在内容前会出现圆圈/三角形等记号</span></li>
+	</ol>
+	<p class="texttab2">3、描述列表</p>
+	<ol class="codelit">
+		<li><span class="sptab">&ltdl&gt</span></li>
+		<li><span class="sptab"><span class="sptab">&ltdt&gt单元格内容&lt/dt&gt</span></span></li>
+		<li><span class="sptab"><span class="sptab">&ltdd&gt单元格内容&lt/dd&gt</span></span></li>
+		<li><span class="sptab">&ltdl&gt</span></li>
+		<li class="codeinst"><span class="sptab">&ltdt&gt&lt/dt&gt内的是表前的自由注释，相当于上文的1、2、3或圆圈</span></li>
+		<li class="codeinst"><span class="sptab">&ltdd&gt&lt/dd&gt内的是表中内容，与上文&ltli&gt&lt/li&gt的内容一致</span></li>
+
+	</ol>
+	<p class="texttab2">若消除列表前面的序号、装饰符，则在css中加入</p>
+	<ul class="codelit">
+		<li><span class="sptab">list-style: none;</span></li>
+	</ul>
+	<p class="texttab">表格</p>
+	<ol class="codeli">
+		<li>&lttable&gt</li>
+		<li><span class="sptab">&lttr&gt</span></li>
+		<li><span class="sptab"><span class="sptab">&lttd&gt表格内容&lt/td&gt</span></span></li>
+		<li><span class="sptab">&lt/tr&gt</span></li>
+		<li>&lttable&gt</li>
+		<li class="codeinst"><span class="sptab">&lttr&gt&lt/tr&gt中表示的是行内容</span></li>
+		<li class="codeinst"><span class="sptab">&lttd&gt&lt/td&gt中表示单元格内容</span></li>
+	</ol>
+	<p class="texttab">文本格式化</p>
+	<table id="wenbengeshihuatable">
+		<tr>
+			<td style="width: 5em; text-align: center;">元素</td>
+			<td style="width: 15em; text-align: center;">含义</td>
+			<td style="text-align: center;">举例</td>
+		</tr>
+		<tr>
+			<td>strong</td>
+			<td>表示内容的重要性</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>em</td>
+			<td>表示内容的着重点</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>mark</td>
+			<td>表示内容高亮显示</td>
+			<td>对搜索结果页面或文章中的搜索词进行突出显示</td>
+		</tr>
+		<tr>
+			<td>small</td>
+			<td>表示细则一类的旁注</td>
+			<td>通常包括免责声明、 注意事项、法律限制、版权信息等</td>
+		</tr>
+		<tr>
+			<td>b</td>
+			<td>希望读者注意的文字</td>
+			<td>如文档摘要里的关键词、评论中的产品名、文章导语等</td>
+		</tr>
+		<tr>
+			<td>i</td>
+			<td>表示不同于其他文字的文字，具有不同的语态或语气</td>
+			<td>如分类名称、技术术语、翻译的散文等</td>
+		</tr>
+		<tr>
+			<td>sub</td>
+			<td>定义下标</td>
+			<td>常见的下标包括化学符号等</td>
+		</tr>
+		<tr>
+			<td>sup</td>
+			<td>定义上标</td>
+			<td>常见的上标包括商标符号、指数和脚注编号等</td>
+		</tr>
+	</table>
 
 
 
 
 
-	<p><span lang="en-US">2</span><span lang="zh-CN">、同一网站的不同文件</span></p>
-	<p>&lt;a href=&quot;./blog.html&quot;&gt;博客&lt;/a&gt;</p>
-	<p>可以用来切换到子页面</p>
-	<p><span lang="en-US">3</span><span lang="zh-CN">、指向另一个网站</span></p>
-	<p><span lang="en-US">&lt;a </span><span lang="en-US">href</span><span lang="en-US">=</span><span
-			lang="en-US">&quot;https://www.baidu.com&quot;
-		</span><span lang="en-US">title</span><span lang="en-US">=</span><span lang="en-US">&quot;Baidu</span><span
-			lang="zh-CN">搜索</span><span lang="en-US">&quot;</span><span lang="en-US">&gt;</span><span
-			lang="en-US">Baidu</span><span lang="en-US">&lt;/a&gt;</span></p>
-	<p>跳转到百度</p>
-	<p class="text_code">
 
-	</p>
+
+
+
+
+
+
+
+
+	<p>连接：</p>
+	<p class="texttab">点击[Text]就能跳转到URL</p>
+	<ul class="codeli">
+		<li>&lt;a href=&quot;URL&quot;&gt;Text&lt;/a&gt;</li>
+	</ul>
+
+	<p class="texttab">URL可指向：</p>
+	<p class="texttab">1、同一页面的某一位置</p>
+	<ol class="codeli">
+		<li>&lt;a href=&quot;./blog.html&quot;&gt;博客&lt;/a&gt;</li>
+		<li>&lt;h2&nbsp;id=&quot;toc1&quot;&gt;简介&lt;/h2&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+		<li class="codeinst">此时点击目录中的简介就会跳转到简介的介绍页面</li>
+	</ol>
+	<p class="texttab">2、同一网站的不同文件</p>
+	<ul class="codeli">
+		<li>&lt;a href=&quot;./blog.html&quot;&gt;博客&lt;/a&gt;</li>
+		<li class="codeinst">/*可以用来切换到子页面*/</li>
+	</ul>
+
+	<p class="texttab">3、指向另一个网站</p>
+	<ul class="codeli">
+		<li>&lt;a href=&quot;https://www.baidu.com&quot;title=&quot;Baidu搜索&quot;&gt;Baidu&lt;/a&gt;</li>
+		<li class="codeinst">跳转到百度</li>
+	</ul>
+	<p>链接属性：</p>
+	<p class="texttab">未访问的链接</p>
+	<ul class="codeli">
+		<li>a:link</li>
+	</ul>
+	<p class="texttab">已访问的链接</p>
+	<ul class="codeli">
+		<li>a:visited</li>
+	</ul>
+	<p class="texttab">当有鼠标悬停在链接上</p>
+	<ul class="codeli">
+		<li>a:hover</li>
+	</ul>
+	<p class="texttab">被选择的链接</p>
+	<ul class="codeli">
+		<li>a:active</li>
+	</ul>
+	<p class="texttab">发送邮件</p>
+	<ul class="codeli">
+		<li>&lta href="mailto:someone@email.com"&gtsomeone&lt/a&gt</li>
+		<li class="codeinst">点击上文中的someone就能发送邮件</li>
+	</ul>
+	<p class="texttab">target属性</p>
+	<ul class="codeli">
+		<li>&lta href="URL" target="_blank"&gtHTML&lt/a&gt</li>
+		<li class="codeinst">点击URL后在_blank(新建标签页)打开UR</li>
+	</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 
 </html>

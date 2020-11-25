@@ -1,38 +1,49 @@
-body{
-	--text_textsize:16px;
-	--text_codesize:9px;
-	--text_codelineheight:px;
+body {
+	--text_textsize: 16px;
+	--text_codesize: 9px;
+	--text_codelineheight: px;
 }
 
-.text_code{
-
-	font-size: var(--text_codesize);
-	font-family: "Conslas";
-	background-color: rgb(200,200,200);
-	line-height: var(--text_codesize);
-
-	
-}
-.text_fsss{
-	margin-top: -9px;
-	font-family: "Conslas";
-	text-indent: calc(2*var(--text_textsize));
-	font-size: var(--text_codesize);
-	line-height: var(--text_codelineheight);
-}
-.text_fs{
-
+.texttab {
 	text-indent: 2em;
-	line-height: 1em;
-	
+	line-height: 0.5em;
+}
+.texttab2 {
+	text-indent: 4em;
+	line-height: 0.5em;
+}
+.texttab3 {
+	text-indent: 6em;
+	line-height: 0.5em;
+}
+.texttab4 {
+	text-indent: 8em;
+	line-height: 0.5em;
 }
 
-.codeline{
+
+.sptab {
+	display: inline-block;
+	text-indent: 2em;
+}
+
+.codeli,.codelit {
 	margin-left: calc(2*var(--text_textsize));
+	padding-left: 2em;
 	max-width: 500px;
-	line-height: var(--text_codesize);
-	background-color: rgb(200,200,200);
+	line-height: var(--text_textsize);
+	background-color: rgb(200, 200, 200);
 	font-size: var(--text_codesize);
 	font-family: "Conslas";
-	text-indent: calc(2*var(--text_textsize));
+}
+.codelit{
+	margin-left: calc(4*var(--text_textsize));
+}
+.codeli li {
+	text-indent: var(--text_textsize);
+}
+
+.codeinst {
+	list-style: none;
+	color: rgb(50, 150, 50);
 }
