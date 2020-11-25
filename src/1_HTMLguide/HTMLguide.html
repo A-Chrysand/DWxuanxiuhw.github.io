@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<title>选项卡切换代码 - 舍力分享</title>
+
+<script>
+	/*---------------------全局设置---------------------*/
+	var height = 40;			//设置导航栏高度
+	var width = 150;			//设置导航栏宽度
+	var MidBorderWidth = 20;	//设置中间间隔宽度
+	/*---------------------全局设置---------------------*/
+	document.documentElement.style.setProperty('--Num_NavHeight', height + "px");
+	document.documentElement.style.setProperty('--Num_NavWidth', width + "px");
+	document.documentElement.style.setProperty('--Num_PageMarginLeftWidth', width + MidBorderWidth + "px");
+	document.documentElement.style.setProperty('--Num_PageMarginRightWidth', MidBorderWidth + "px");
+
+</script>
+<style type="text/css">
+	#HTMLNav {
+		max-width: 100%;
+	}
+
+	ul,
+	li {
+		width: var(--Num_NavWidth);
+		max-width: var(--Num_NavWidth);
+		height: var(--Num_NavHeight);
+		line-height: var(--Num_NavHeight);
+		border-bottom: none;
+		cursor: pointer;
+
+	}
+
+	ul {
+		list-style: none;
+		display: inline-block;
+		display: block;
+		margin: 0px;
+		padding: 0px;
+	}
+
+	li {
+		margin-left: -20px;
+		padding-left: 20px;
+		background-color: cadetblue;
+	}
+
+
+	li:nth-of-type(2n) {
+		background-color: rgb(113, 208, 252);
+	}
+
+	li:hover {
+		background-color: coral;
+	}
+
+	#HTMLNav div {
+		margin-top: calc(-1.3*var(--Num_NavHeight));
+		padding: 0px;
+		margin-left: var(--Num_PageMarginLeftWidth);
+		margin-right: var(--Num_PageMarginRightWidth);
+		max-width: 800px;
+
+	}
+
+	.hiddenone {
+		display: none;
+	}
+
+	p {
+		line-height: 0.5em;
+	}
+
+	iframe {
+		width: 100%;
+		border: 0px;
+		max-width: 1200px;
+	}
+
+	#htmlwenben {
+		height: 1000px;
+	}
+</style>
+<script type="text/javascript">
+	window.onload = function () {
+		var mytab = document.getElementById("HTMLNav");
+		var myul = mytab.getElementsByTagName("ul")[0];
+		var myli = myul.getElementsByTagName("li");
+		var mydiv = mytab.getElementsByTagName("div");
+		for (i = 0, len = myli.length; i < len; i++) {
+			myli[i].index = i;
+			myli[i].onclick = function () {
+				for (var n = 0; n < len; n++) {
+					myli[n].className = "";
+					mydiv[n].className = "hiddenone";
+				}
+				this.className = "slyes";
+				mydiv[this.index].className = "";
+			}
+		}
+	}    </script>
+</head>
+
+<body>
+	<div id="HTMLNav">
+		<ul>
+			<li class="slyes">HTML文本</li>
+			<li>HTML多媒体</li>
+			<li>HTML表单类标签</li>
+			<li>HTML变形</li>
+		</ul>
+		<div>
+			<iframe id="htmlwenben" src="HTML文本.html"></iframe>
+		</div>
+		<div class="hiddenone">
+			<iframe id="htmlduomeiti" src="HTML多媒体.html"></iframe>
+		</div>
+		<div class="hiddenone">
+			网站聚集地由舍力创立,汇集最优秀的中文网站及资源,及时收录企业/博客/论坛/门户等分类的网址和内容,让您的网络生活更简单精彩！http://daohang.shuyong.net
+		</div>
+		<div class="hiddenone">
+			<p>1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890
+			</p>
+		</div>
+	</div>
+</body>
+
+</html>

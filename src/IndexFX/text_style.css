@@ -1,0 +1,38 @@
+body{
+	--text_textsize:16px;
+	--text_codesize:9px;
+	--text_codelineheight:px;
+}
+
+.text_code{
+
+	font-size: var(--text_codesize);
+	font-family: "Conslas";
+	background-color: rgb(200,200,200);
+	line-height: var(--text_codesize);
+
+	
+}
+.text_fsss{
+	margin-top: -9px;
+	font-family: "Conslas";
+	text-indent: calc(2*var(--text_textsize));
+	font-size: var(--text_codesize);
+	line-height: var(--text_codelineheight);
+}
+.text_fs{
+
+	text-indent: 2em;
+	line-height: 1em;
+	
+}
+
+.codeline{
+	margin-left: calc(2*var(--text_textsize));
+	max-width: 500px;
+	line-height: var(--text_codesize);
+	background-color: rgb(200,200,200);
+	font-size: var(--text_codesize);
+	font-family: "Conslas";
+	text-indent: calc(2*var(--text_textsize));
+}

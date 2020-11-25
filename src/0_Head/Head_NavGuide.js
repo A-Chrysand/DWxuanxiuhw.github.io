@@ -36,7 +36,7 @@ window.onload = function () {
         myli[i].onclick = function () {
             for (var n = 0; n < len; n++) {
                 myli[n].className = "";
-                mydiv[n].className = "slno";
+                mydiv[n].className = "hiddenone";
             }
             this.className = "slyes";
             mydiv[this.index].className = "";

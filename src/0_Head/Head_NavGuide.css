@@ -1,0 +1,79 @@
+body {
+	--Num1px: 1px;
+	--Num1deg: 1deg;
+	--Num1sec: 1s;
+	--Num_NavHeight: calc(var(--Num1px)*var(--hei));
+	--Num_donghuashijian: calc(var(--Num1sec)*var(--donghuashijian));
+	--frontrotate: calc(var(--Num_NavHeight)*0.5*var(--A1));
+	--backrotate: calc(var(--Num_NavHeight)*0.5*var(--A2));
+	--deghover: calc(var(--Num1deg)*var(--dg)*var(--d1));
+	--degleave: calc(var(--Num1deg)*var(--dg)*var(--d2));
+}
+
+#Nav_Head {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 100%;
+}
+
+#Nav_Head ul {
+	padding: 0px;
+	margin: 0px;
+	height: var(--Num_NavHeight);
+	position: absolute;
+	width: 100%;
+	display: flex;
+	background-color: var(--frontcolor);
+	border-bottom: none;
+	cursor: pointer;
+}
+
+#Nav_Head li {
+	border: 1px black dotted;
+	padding: 0px;
+	width: 20%;
+	list-style-type: none;
+	text-align: center;
+	line-height: var(--Num_NavHeight);
+	transform-style: preserve-3d;
+	transition: all var(--Num_donghuashijian) linear;
+	height: var(--Num_NavHeight);
+	cursor: pointer;
+}
+
+.hiddenone {
+	display: none;
+}
+
+li:hover {
+	transform: rotateX(var(--deghover));
+}
+
+.Guide_back, .Guide_front {
+	margin: 0px;
+	padding: 0px;
+	position: absolute;
+	width: 100%;
+}
+
+.Guide_front {
+	height: var(--Num_NavHeight);
+	background-color: var(--frontcolor);
+	transform: translateZ(var(--frontrotate));
+}
+
+.Guide_back {
+	height: var(--Num_NavHeight);
+	background-color: var(--backcolor);
+	transform: translateY(var(--backrotate)) rotateX(var(--degleave));
+}
+
+iframe {
+	width: 100%;
+	max-width: 1500px;
+	height: 500px;
+	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 0px;
+}

@@ -1,7 +1,9 @@
 body{
 	max-width: 1500px;
+	margin:auto;
 }
-#Header {
+#Head_HelloWorld {
+
 	width: 100%;
 	height: 120px;
 	margin-top: 0px;
@@ -9,11 +11,14 @@ body{
 	border: 0px;
 }
 
-#Nav_H
+#Head_NavGuide
 {
+
 	width: 100%;
 	height: 1050px;
 	margin-top: 0px;
-	padding: 0px;
+	margin: auto;
+
+
 	border: 0px;
 }
