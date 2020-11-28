@@ -35,13 +35,12 @@
 			border-collapse: collapse;
 		}
 	</style>
+
 <body>
 	<h1 style="text-align: center">CSS的引用</h1>
-	<div style="padding-left: 2em;padding-right: 2em;">
-		<p class="texttab">CSS作为HTML的补充而存在的东西，它的主要作用是使HTML元素更加地美观，下面将介绍CSS的3种引用方法。</p>
-	</div>
+	<p class="texttab">CSS作为HTML的补充而存在的东西，它的主要作用是使HTML元素更加地美观，下面将介绍CSS的3种引用方法。</p>
 
-	<p>内部样式表</p>
+	<h3 class="texttab">内部样式表</h3>
 	<p class="texttab">在HTML文件的几乎任意一处，添加:</p>
 	<ol class="codeli">
 		<li>&lt;style type=&quot;text/css&quot;&gt;</li>
@@ -50,15 +49,15 @@
 		<li>&lt;style type=&quot;text/css&quot;&gt;</li>
 	</ol>
 	<p class="texttab">就能定义样式。</p>
-		<p>外部样式表</p>
+	<h3 class="texttab">外部样式表</h3>
 	<p class="texttab">将CSS单独书写在文件后缀名为.css的文件中，然后在HTML的&lt;head&gt;中添加CSS文件链接:</p>
 	<ul class="codeli">
 		<li>&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot; /&gt;</li>
 	</ul>
-			<p>内联样式</p>
+	<h3 class="texttab">内联样式</h3>
 	<p class="texttab">内联样式是指直接在标签内添加样式属性:</p>
 	<ul class="codeli">
-		<li>&lt;p  style=&quot;color: red;margin-left: 2em;font-size: 16px;&quot;&gt;内联样式表&lt;/p&gt;</li>
+		<li>&lt;p style=&quot;color: red;margin-left: 2em;font-size: 16px;&quot;&gt;内联样式表&lt;/p&gt;</li>
 	</ul>
 	<p class="texttab">三种样式引入的优先级顺序是：外部样式&lt;内部样式&lt;内联样式</p>
 	<p class="texttab">在实际应用中，需要考虑优先级来进行添加样式表</p>
