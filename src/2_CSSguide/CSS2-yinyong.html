@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../IndexFX/text_style.css" />
+	<link rel="stylesheet" href="../IndexFX/StaticSet.css" />
+	<title>Document</title>
+	<style>
+		body {
+			margin-left: 0px;
+			margin-top: -1em;
+			padding: 0px, 0px, 0px, 0px;
+		}
+
+		ul {
+			list-style: none;
+		}
+
+		#wenbengeshihuatable {
+			margin-left: 2em;
+			border-width: 1px;
+			border-style: solid;
+			border-color: darkblue;
+			border-collapse: collapse;
+			max-width: 800px;
+			width: 90%;
+		}
+
+		#wenbengeshihuatable td {
+			border-width: 1px;
+			border-style: solid;
+			border-color: darkblue;
+			border-collapse: collapse;
+		}
+	</style>
+<body>
+	<h1 style="text-align: center">CSS的引用</h1>
+	<div style="padding-left: 2em;padding-right: 2em;">
+		<p class="texttab">CSS作为HTML的补充而存在的东西，它的主要作用是使HTML元素更加地美观，下面将介绍CSS的3种引用方法。</p>
+	</div>
+
+	<p>内部样式表</p>
+	<p class="texttab">在HTML文件的几乎任意一处，添加:</p>
+	<ol class="codeli">
+		<li>&lt;style type=&quot;text/css&quot;&gt;</li>
+		<li><span class="sptab">/*样式添加在这里*/</span></li>
+		<li><span class="sptab">/*如background-ccolor:red*/</span></li>
+		<li>&lt;style type=&quot;text/css&quot;&gt;</li>
+	</ol>
+	<p class="texttab">就能定义样式。</p>
+		<p>外部样式表</p>
+	<p class="texttab">将CSS单独书写在文件后缀名为.css的文件中，然后在HTML的&lt;head&gt;中添加CSS文件链接:</p>
+	<ul class="codeli">
+		<li>&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot; /&gt;</li>
+	</ul>
+			<p>内联样式</p>
+	<p class="texttab">内联样式是指直接在标签内添加样式属性:</p>
+	<ul class="codeli">
+		<li>&lt;p  style=&quot;color: red;margin-left: 2em;font-size: 16px;&quot;&gt;内联样式表&lt;/p&gt;</li>
+	</ul>
+	<p class="texttab">三种样式引入的优先级顺序是：外部样式&lt;内部样式&lt;内联样式</p>
+	<p class="texttab">在实际应用中，需要考虑优先级来进行添加样式表</p>
+</body>
+
+</html>

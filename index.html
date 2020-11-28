@@ -5,17 +5,64 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>rnohw</title>
-	<link rel="stylesheet" href="../hw.github.io/src/IndexFX/indexFX.css" />
-	<link rel="stylesheet" href="../hw.github.io/src/IndexFX/StaticSet.css" />
+	<link rel="stylesheet" href="/src/0_Head/Head_NavGuide.css" />
+	<link rel="stylesheet" href="/src/IndexFX/StaticSet.css" />
+	<script src="/src/0_Head/Head_NavGuide.js"></script>
 </head>
+<style>
+	body {
+		max-width: 1500px;
+		margin: auto;
+	}
+
+	#Head_HelloWorld {
+
+		width: 100%;
+		height: 120px;
+		margin-top: 0px;
+		padding: 0px;
+		border: 0px;
+	}
+</style>
 
 <body>
 	<div>
-		<iframe id="Head_HelloWorld" src="src\0_Head\Head_HelloWorld.html"></iframe>
+		<iframe scrolling="no" id="Head_HelloWorld" src="src\0_Head\Head_HelloWorld.html"></iframe>
 	</div>
-	<div>
-		<iframe id="Head_NavGuide" src="src\0_Head\Head_NavGuide.html"></iframe>
+	<div id="Nav_Head">
+		<ul>
+			<li class="slyes">
+				<div class="Guide_front">HTML学习笔记</div>
+				<div class="Guide_back">HTML学习笔记</div>
+			</li>
+			<li>
+				<div class="Guide_front">CSS学习笔记</div>
+				<div class="Guide_back">CSS学习笔记</div>
+
+			</li>
+			<li>
+				<div class="Guide_front">javaScript学习笔记</div>
+				<div class="Guide_back">javaScript学习笔记</div>
+			</li>
+			<li>
+				<div class="Guide_front">Ac's工具箱</div>
+				<div class="Guide_back">Ac's工具箱</div>
+			</li>
+			<li>
+				<div class="Guide_front">网页开发网站推荐</div>
+				<div class="Guide_back">网页开发网站推荐</div>
+			</li>
+		</ul>
+		<div>
+			<iframe scrolling="no" src="src\1_HTMLguide\HTMLguide.html"></iframe>
+			<iframe scrolling="no" src="../discrption1.html" class="hiddenone"></iframe>
+			<iframe scrolling="no" src="../Good.html" class="hiddenone"></iframe>
+			<iframe scrolling="no" src="../Good.html" class="hiddenone"></iframe>
+			<iframe scrolling="no" src="../Good.html" class="hiddenone"></iframe>
+		</div>
+
 	</div>
+
 </body>
 
 </html>
