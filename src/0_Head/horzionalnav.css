@@ -15,7 +15,6 @@ body {
 	margin-right: auto;
 	margin-left: var(--nvmarginleft);
 	margin-right: var(--nvmarginleft);
-	;
 }
 
 #horzionalnav ul {
@@ -72,9 +71,6 @@ li:hover {
 
 #horzionalnav_ifbox {
 	padding-top: calc(2*var(--Num_NavHeight));
-
 }
 
-iframe{
-	width: 100%;
-}
+

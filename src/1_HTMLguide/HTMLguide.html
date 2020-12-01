@@ -46,10 +46,6 @@
 		margin-left: 20px;
 
 	}
-
-	iframe {
-		width: 100%;
-	}
 </style>
 <script type="text/javascript">
 	window.onload = function () {
@@ -65,56 +61,40 @@
 				tgn = i;
 				for (var n = 0; n < len; n++) {
 					myli[n].className = "html_showone";
-
 					mydiv[n].className = "html_hiddenone";
 
 				}
-
 				this.className = "html_nav_li";
 				mydiv[this.index].className = "";
-				if (i == 0) {
-					iframe.height = "2000px";
-				}
 			}
-
 		}
-
 	}
-
-	// document.domain = "caibaojian.com";
-	function setIframeHeight(iframe) {
-		if (iframe) {
-			var iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
-			if (iframeWin.document.body) {
-				iframe.height = iframeWin.document.documentElement.scrollHeight || iframeWin.document.body.scrollHeight;
-			}
-		}
-	};
-
-	function serh() {
-		setIframeHeight(document.getElementsByClassName('html_showone')[0]);
-	};
-
-	/*window.onload = function () {
-		setIframeHeight(document.getElementsByClassName('html_showone')[0]);
-	};*/
-
-
 </script>
 </head>
 
 <body>
 	<div id="htmlnav">
 		<ul>
-			<li class="html_nav_li">HTML文本</li>
+			<li class="html_nav_li"></li>
+			<li>HTML文本</li>
+			<li>HTML链接</li>
 			<li>HTML多媒体</li>
 			<li>HTML表单类标签</li>
+
 		</ul>
 		<div id="htmlrightpages">
-			<iframe class="html_showone" id="htmlwenben" src="HTML文本.html"></iframe>
-			<iframe class="html_hiddenone" id="htmlduomeiti" src="HTML多媒体.html"></iframe>
-			<iframe class="html_hiddenone" id="htmlbiaodanlei" src="HTML表单类.html"></iframe>
+			<iframe class="html_showone" id="htmljianjie" src="HTMLjianjie.html" ></iframe>
+			<iframe class="html_hiddenone" id="htmlwenben" src="HTML文本.html" ></iframe>
+			<iframe class="html_hiddenone" id="htmllink" src="HTMLlink.html" ></iframe>
+			<iframe class="html_hiddenone" id="htmlduomeiti" src="HTML多媒体.html" ></iframe>
+			<iframe class="html_hiddenone" id="htmlbiaodanlei" src="HTML表单类.html" ></iframe>
 		</div>
+		<style>
+			iframe{
+				height: 1120px;
+			}
+
+		</style>
 	</div>
 </body>
 

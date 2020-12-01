@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p style="margin-left:  4em">样例：文本输入框：
+	</p><textarea name="textarea" style="width: 400px;height: 50px; margin-left: 5em;">在这里输入文字</textarea>
+	<footer style="height: 30px;"></footer>
+    <p>提交按钮：</p>
+	<ul class="codeli">
+		<li> &lt;input type=&quot;submit&quot; value=&quot;submit&quot;/&gt;</li>
+	</ul>
+	<span style="margin-left:  4em">样例：提交按钮：</span>
+	<input style="width: 100px;" type="submit" value="提交" />
+	<p>优化：</p>
+	<p class="texttab">在尝试上面的选项后，你发现框框挺难选中的，加以下操作后，点击旁边的文字也能选中框框了，真是夕阳红枪法的福音。</p>
+	<p class="texttab">示例代码：</p>
+	<ol class="codeli">
+		<li>&lt;p&gt;&lt;label for=&quot;user&quot;&gt;用户：&lt;/label&gt;
+		</li>
+		<li>&lt;input type=&quot;text&quot; id=&quot;user&quot; name=&quot;user&quot;/&gt;&lt;/p&gt;
+		</li>
+		<li>&lt;p&gt;&lt;label for=&quot;pwd&quot;&gt;密码：&lt;/label&gt;
+		</li>
+		<li>&lt;input type=&quot;text&quot; id=&quot;pwd&quot; name=&quot;password&quot; /&gt;&lt;/p&gt;
+		</li>
+	</ol>
+	<p class="texttab">在&lt;input&gt;旁边添加一个&lt;label&gt;，&lt;label for="自定义属性"&gt;与&lt;input id="自定义属性"&gt;中的两个自定义属性要相等。
+	</p>
+
+	<p class="texttab2"><label for="user" style="line-height: 16px;">样例1：文本输入框pro：</label>
+		<input type="text" id="user" name="user" /></p>
+	<p class="texttab2">
+		样例2：单选框pro：
+		<input type="radio" id="s1" name="s1" />
+		<label for="s1">选项1</label>
+		<input type="radio" id="s2" name="s1" />
+		<label for="s2">选项2：</label>
+	</p>
+	<p class="texttab2">
+		样例3：下拉选项表pro-：
+		<label for="slts">选项2：</label>
+		<select style="width: 100px;" id="slts">
+			<option value="apple">苹果</option>
+			<option value="banana">香蕉</option>
+			<option value="pear">梨</option>
+			<option value="apple">菠萝</option>
+		</select>
+	</p>
+</body>
+</html>

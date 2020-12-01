@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <div id="horzionalnav">
+    <div id="horzionalnav" >
         <ul>
             <li class="hz_nav_li">
                 <div class="Guide_front">HTML学习笔记</div>
@@ -34,13 +34,20 @@
             </li>
         </ul>
         <div id="horzionalnav_ifbox">
-            <iframe src="../1_HTMLguide/HTMLguide.html" class="hz_nav_li_showone"></iframe>
-            <iframe src="" class="hz_nav_li_hiddenone"></iframe>
-            <iframe src="" class="hz_nav_li_hiddenone"></iframe>
-            <iframe src="" class="hz_nav_li_hiddenone"></iframe>
-            <iframe src="" class="hz_nav_li_hiddenone"></iframe>
+            <iframe src="../1_HTMLguide/HTMLguide.html" class="hz_nav_li_showone" id="hz_nav_htmlguide"></iframe>
+            <iframe src="../2_CSSguide/CSS1-jianjie.html" class="hz_nav_li_hiddenone" id="hz_nav_cssguide"></iframe>
+            <iframe src="" class="hz_nav_li_hiddenone" id=""></iframe>
+            <iframe src="" class="hz_nav_li_hiddenone" id=""></iframe>
+            <iframe src="" class="hz_nav_li_hiddenone" id=""></iframe>
         </div>
-
+        <style>
+            #hz_nav_htmlguide{
+                height: 1300px;
+            }
+            #hz_nav_cssguide{
+                height: 1500px;
+            }
+        </style>
     </div>
 </body>
 

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<script type="text/javascript">
+    //进行Iframe的自动撑开,让所有父页面的Iframe都自动适应包含页高度
+    function autoHeight() {
+        var doc = document,
+            p = window;
+        while (p = p.parent) {
+            var frames = p.frames,
+                frame,
+                i = 0;
+            while (frame = frames[i++]) {
+                if (frame.document == doc) {
+                    frame.frameElement.style.height = doc.body.scrollHeight + 'px'; // 这里一定要注意 火狐必须要加'px‘ 否则火狐无效
+                    doc = p.document;
+                    break;
+                }
+            }
+            if (p == top) {
+                break;
+            }
+        }
+    }
+</script>
+
+<body onload="autoHeight();">
+    <!--经测试 这个最最最子的页面的body中必须要有一个有高度的div才行 否则上面的自适应生效-->
+    <div style="height: 1px;">
+    </div>
+    <div style="padding-bottom: 10px;">
+        <!--这句话也是必不可少的-->
+    </div>
+</body>
+
+</html>
