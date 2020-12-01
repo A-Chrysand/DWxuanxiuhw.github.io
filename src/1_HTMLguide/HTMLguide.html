@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html>
 <meta charset="utf-8">
-<title>选项卡切换代码 - 舍力分享</title>
+<title>HTMLnavguide</title>
+<link rel="stylesheet" href="../IndexFX/StaticSet.css" />
 <style type="text/css">
 	#htmlnav {
 		display: flex;
 		margin-left: auto;
 		margin-right: auto;
-
 	}
 
 	ul {
 		border-bottom: none;
 		list-style: none;
-
 		margin: 0px;
 		padding: 0px;
 		cursor: pointer;
@@ -69,20 +68,32 @@
 				this.className = "html_nav_li";
 				mydiv[this.index].className = "";
 			}
+			setIframeHeight();
+			setH();
 		}
 
 	}
 
-	function reinitlframe() {
-		getElementByClassName("html_showone");
-		try {
-			var bHeight = iframe.contentWindow.document.body.scrollHeight;
-			iframe.height = bHeight;
+	// document.domain = "caibaojian.com";
+	function setIframeHeight(iframe) {
+		if (iframe) {
+			var iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
+			if (iframeWin.document.body) {
+				iframe.height = iframeWin.document.documentElement.scrollHeight || iframeWin.document.body.scrollHeight;
+			}
 		}
-		catch (ex) {
 
-		}
+
+	};
+	/*
+	window.onload = function () {
+		setIframeHeight(document.getElementsByClassName('html_showone')[0]);
+	};*/
+	function setH(){
+		setIframeHeight(document.getElementsByClassName('html_showone')[0]);
 	}
+
+
 </script>
 </head>
 

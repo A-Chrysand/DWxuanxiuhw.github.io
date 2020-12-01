@@ -10,9 +10,12 @@ body {
 	--deghover: calc(var(--Num1deg)*var(--dg)*var(--d1));
 	--degleave: calc(var(--Num1deg)*var(--dg)*var(--d2));
 }
-body{
+
+body {
 	margin-right: auto;
 	margin-left: var(--nvmarginleft);
+	margin-right: var(--nvmarginleft);
+	;
 }
 
 #horzionalnav ul {
@@ -40,7 +43,7 @@ body{
 	cursor: pointer;
 }
 
-.hz_hiddenone {
+.hz_nav_li_hiddenone {
 	display: none;
 }
 
@@ -67,8 +70,7 @@ li:hover {
 	transform: translateY(var(--backrotate)) rotateX(var(--degleave));
 }
 
-#horzionalnav_ifbox{
-	width: var(--nvwid);
-	height: 100%;
+#horzionalnav_ifbox {
+	padding-top: calc(2*var(--Num_NavHeight));
 }
 
