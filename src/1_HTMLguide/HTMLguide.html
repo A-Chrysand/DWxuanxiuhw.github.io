@@ -6,8 +6,7 @@
 <style type="text/css">
 	#htmlnav {
 		display: flex;
-		margin-left: auto;
-		margin-right: auto;
+
 	}
 
 	ul {
@@ -43,13 +42,13 @@
 	}
 
 	#htmlrightpages {
-		width: 1000px;
+		width: 100%;
 		margin-left: 20px;
 
 	}
 
 	iframe {
-		width: 70%;
+		width: 100%;
 	}
 </style>
 <script type="text/javascript">
@@ -58,18 +57,26 @@
 		var myul = mytab.getElementsByTagName("ul")[0];
 		var myli = myul.getElementsByTagName("li");
 		var mydiv = mytab.getElementsByTagName("iframe");
+		var tgn;
 		for (i = 0, len = myli.length; i < len; i++) {
+
 			myli[i].index = i;
 			myli[i].onclick = function () {
+				tgn = i;
 				for (var n = 0; n < len; n++) {
 					myli[n].className = "html_showone";
+
 					mydiv[n].className = "html_hiddenone";
+
 				}
+
 				this.className = "html_nav_li";
 				mydiv[this.index].className = "";
+				if (i == 0) {
+					iframe.height = "2000px";
+				}
 			}
-			setIframeHeight();
-			setH();
+
 		}
 
 	}
@@ -82,16 +89,15 @@
 				iframe.height = iframeWin.document.documentElement.scrollHeight || iframeWin.document.body.scrollHeight;
 			}
 		}
-
-
 	};
-	/*
-	window.onload = function () {
+
+	function serh() {
+		setIframeHeight(document.getElementsByClassName('html_showone')[0]);
+	};
+
+	/*window.onload = function () {
 		setIframeHeight(document.getElementsByClassName('html_showone')[0]);
 	};*/
-	function setH(){
-		setIframeHeight(document.getElementsByClassName('html_showone')[0]);
-	}
 
 
 </script>
@@ -100,8 +106,8 @@
 <body>
 	<div id="htmlnav">
 		<ul>
-			<li>HTML文本</li>
-			<li class="html_nav_li">HTML多媒体</li>
+			<li class="html_nav_li">HTML文本</li>
+			<li>HTML多媒体</li>
 			<li>HTML表单类标签</li>
 		</ul>
 		<div id="htmlrightpages">

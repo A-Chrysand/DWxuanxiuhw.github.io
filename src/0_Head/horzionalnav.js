@@ -47,16 +47,4 @@ window.onload = function () {
 }
 
 
-function reinitIframe() {
-    var iframe = document.getElementById("hz_nav_li_showone");
-    try {
-        var bHeight = iframe.contentWindow.document.body.scrollHeight;
-        /*       
-                           var dHeight = iframe.contentWindow.document.documentElement.scrollHeight;              
-                           var height = Math.max(bHeight, dHeight);                          
-                            iframe.height = height;                */
-        iframe.height = bHeight;
-    }
-    catch (ex) { }
-}
 

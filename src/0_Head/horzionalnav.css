@@ -72,5 +72,9 @@ li:hover {
 
 #horzionalnav_ifbox {
 	padding-top: calc(2*var(--Num_NavHeight));
+
 }
 
+iframe{
+	width: 100%;
+}
