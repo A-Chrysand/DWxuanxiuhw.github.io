@@ -1,12 +1,14 @@
 /*---------------------全局设置---------------------*/
-var bol = 1;				//设置1向上翻 -1向下翻
-var height = 36;			//设置导航栏高度
-var deg = 90;				//设置翻转角度
-var donghuashijian = 0.1;	//设置动画时间
-var frontcolor = "rgb(100,200,100)";     //设置滑块前面颜色
-var backcolor = "pink";        //设置滑块背面颜色
-
+var nav_ul_width= 80;					//设置导航栏总宽度
+var bol = 1;							//设置1向上翻 -1向下翻
+var height = 36;						//设置导航栏高度
+var deg = 90;							//设置翻转角度
+var donghuashijian = 0.1;				//设置动画时间
+var frontcolor = "rgb(100,200,100)";	//设置滑块前面颜色
+var backcolor = "pink";					//设置滑块背面颜色
 /*---------------------全局设置---------------------*/
+document.documentElement.style.setProperty('--nvwid', nav_ul_width+"%");
+document.documentElement.style.setProperty('--nvmarginleft', (100-nav_ul_width)/2+"%");
 document.documentElement.style.setProperty('--hei', height);
 document.documentElement.style.setProperty('--dg', deg);
 document.documentElement.style.setProperty('--donghuashijian', donghuashijian);
@@ -27,19 +29,19 @@ else {//向下翻
 }
 
 window.onload = function () {
-    var mytab = document.getElementById("Nav_Head");
-    var myul = mytab.getElementsByTagName("ul")[0];
-    var myli = myul.getElementsByTagName("li");
-    var mydiv = mytab.getElementsByTagName("iframe");
-    for (i = 0, len = myli.length; i < len; i++) {
-        myli[i].index = i;
-        myli[i].onclick = function () {
+    var hz_tab = document.getElementById("horzionalnav");
+    var hz_nav_ul = hz_tab.getElementsByTagName("ul")[0];
+    var hz_nav_li = hz_nav_ul.getElementsByTagName("li");
+    var hz_nav_iframe = hz_tab.getElementsByTagName("iframe");
+    for (i = 0, len = hz_nav_li.length; i < len; i++) {
+        hz_nav_li[i].index = i;
+        hz_nav_li[i].onclick = function () {
             for (var n = 0; n < len; n++) {
-                myli[n].className = "";
-                mydiv[n].className = "hiddenone";
+                hz_nav_li[n].className = "";
+                hz_nav_iframe[n].className = "hz_hiddenone";
             }
-            this.className = "slyes";
-            mydiv[this.index].className = "";
+            this.className = "hz_nav_li";
+            hz_nav_iframe[this.index].className = "";
         }
     }
 }

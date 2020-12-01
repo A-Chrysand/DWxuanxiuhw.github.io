@@ -3,7 +3,7 @@
 <meta charset="utf-8">
 <title>选项卡切换代码 - 舍力分享</title>
 <style type="text/css">
-	#HTMLNav {
+	#htmlnav {
 		display: flex;
 		margin-left: auto;
 		margin-right: auto;
@@ -39,24 +39,23 @@
 	}
 
 
-	.hiddenone {
+	.html_hiddenone {
 		display: none;
 	}
 
-	#HTMLsubpage {
+	#htmlrightpages {
 		width: 1000px;
 		margin-left: 20px;
 
 	}
-	iframe{
+
+	iframe {
 		width: 70%;
 	}
-
-
 </style>
 <script type="text/javascript">
 	window.onload = function () {
-		var mytab = document.getElementById("HTMLNav");
+		var mytab = document.getElementById("htmlnav");
 		var myul = mytab.getElementsByTagName("ul")[0];
 		var myli = myul.getElementsByTagName("li");
 		var mydiv = mytab.getElementsByTagName("iframe");
@@ -64,29 +63,40 @@
 			myli[i].index = i;
 			myli[i].onclick = function () {
 				for (var n = 0; n < len; n++) {
-					myli[n].className = "";
-					mydiv[n].className = "hiddenone";
+					myli[n].className = "html_showone";
+					mydiv[n].className = "html_hiddenone";
 				}
-				this.className = "slyes";
+				this.className = "html_nav_li";
 				mydiv[this.index].className = "";
 			}
 		}
 
 	}
+
+	function reinitlframe() {
+		getElementByClassName("html_showone");
+		try {
+			var bHeight = iframe.contentWindow.document.body.scrollHeight;
+			iframe.height = bHeight;
+		}
+		catch (ex) {
+
+		}
+	}
 </script>
 </head>
 
 <body>
-	<div id="HTMLNav">
+	<div id="htmlnav">
 		<ul>
 			<li>HTML文本</li>
-			<li class="slyes">HTML多媒体</li>
+			<li class="html_nav_li">HTML多媒体</li>
 			<li>HTML表单类标签</li>
 		</ul>
-		<div id="HTMLsubpage">
-			<iframe id="htmlwenben"  src="HTML文本.html"></iframe>
-			<iframe class="hiddenone" id="htmlduomeiti"  src="HTML多媒体.html"></iframe>
-			<iframe class="hiddenone" id="htmlbiaodanlei"  src="HTML表单类.html"></iframe>
+		<div id="htmlrightpages">
+			<iframe class="html_showone" id="htmlwenben" src="HTML文本.html"></iframe>
+			<iframe class="html_hiddenone" id="htmlduomeiti" src="HTML多媒体.html"></iframe>
+			<iframe class="html_hiddenone" id="htmlbiaodanlei" src="HTML表单类.html"></iframe>
 		</div>
 	</div>
 </body>

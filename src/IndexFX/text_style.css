@@ -30,7 +30,8 @@ body {
 .codeli,.codelit {
 	margin-left: calc(2*var(--text_textsize));
 	padding-left: 2em;
-	max-width: 500px;
+	width: 80%;
+	max-width: 800px;
 	line-height: var(--text_textsize);
 	background-color: rgb(200, 200, 200);
 	font-size: var(--text_codesize);

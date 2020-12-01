@@ -10,27 +10,24 @@ body {
 	--deghover: calc(var(--Num1deg)*var(--dg)*var(--d1));
 	--degleave: calc(var(--Num1deg)*var(--dg)*var(--d2));
 }
-
-#Nav_Head {
-
-
+body{
 	margin-right: auto;
-	max-width: 100%;
+	margin-left: var(--nvmarginleft);
 }
 
-#Nav_Head ul {
+#horzionalnav ul {
 	padding: 0px;
 	margin: 0px;
 	height: var(--Num_NavHeight);
 	position: absolute;
-	width: 80%;
+	width: var(--nvwid);
 	display: flex;
 	background-color: var(--frontcolor);
 	border-bottom: none;
 	cursor: pointer;
 }
 
-#Nav_Head li {
+#horzionalnav li {
 	border: 1px black dotted;
 	padding: 0px;
 	width: 20%;
@@ -43,7 +40,7 @@ body {
 	cursor: pointer;
 }
 
-.hiddenone {
+.hz_hiddenone {
 	display: none;
 }
 
@@ -70,12 +67,8 @@ li:hover {
 	transform: translateY(var(--backrotate)) rotateX(var(--degleave));
 }
 
-iframe {
-	width: 100%;
-	max-width: 1500px;
-	height: var(--scrlHeight);
-	margin-top: 50px;
-	margin-left: auto;
-	margin-right: auto;
-	border: 0px;
+#horzionalnav_ifbox{
+	width: var(--nvwid);
+	height: 100%;
 }
+
