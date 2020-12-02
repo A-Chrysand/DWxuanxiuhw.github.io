@@ -4,7 +4,7 @@ var bol = 1;							//设置1向上翻 -1向下翻
 var height = 36;						//设置导航栏高度
 var deg = 90;							//设置翻转角度
 var donghuashijian = 0.1;				//设置动画时间
-var frontcolor = "rgb(100,200,100)";	//设置滑块前面颜色
+var frontcolor = "rgb(136,205,241)";	//设置滑块前面颜色
 var backcolor = "pink";					//设置滑块背面颜色
 /*---------------------全局设置---------------------*/
 document.documentElement.style.setProperty('--nvwid', nav_ul_width + "%");
@@ -44,6 +44,8 @@ window.onload = function () {
             hz_nav_iframe[this.index].className = "";
         }
     }
+    document.getElementById("adoplayer").volume = 0.7;
+    alert("制作：\n网络工程1901班\n任嘉骏\n19408000026");
 }
 
 
