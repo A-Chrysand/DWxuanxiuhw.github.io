@@ -1,7 +1,7 @@
 body {
 	--text_textsize: 16px;
 	--text_codesize: 9px;
-	--text_codelineheight: px;
+	--codeli_maxwidth:800px;
 }
 
 .texttab {
@@ -30,16 +30,22 @@ body {
 .codeli,.codelit {
 	margin-left: calc(2*var(--text_textsize));
 	padding-left: 2em;
-	width: 80%;
-	max-width: 800px;
 	line-height: var(--text_textsize);
 	background-color: rgb(200, 200, 200);
 	font-size: var(--text_codesize);
 	font-family: "Conslas";
 }
-.codelit{
-	margin-left: calc(4*var(--text_textsize));
+.codeli{
+	max-width: var(--codeli_maxwidth);
 }
+.codelit{
+
+
+	margin-left: calc(4*var(--text_textsize));
+	max-width: calc(var(--codeli_maxwidth) - 2*var(--text_textsize));
+}
+
+
 .codeli li {
 	text-indent: var(--text_textsize);
 }
