@@ -45,7 +45,7 @@ window.onload = function () {
         }
     }
     document.getElementById("adoplayer").volume = 0.7;
-    alert("制作：\n网络工程1901班\n任嘉骏\n19408000026");
+    alert("制作：\n班级\n姓名\n学号");
 }
 
 
